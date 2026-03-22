@@ -6,7 +6,7 @@ If the server fails to launch, ensure you have installed the required libraries:
     pip install fastapi uvicorn
 
 To run the server locally:
-    python -m uvicorn app:app --reload
+    python -m uvicorn Sales_prediction_app:app --reload
 """
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel

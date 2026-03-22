@@ -34,7 +34,7 @@ RUN pip install --upgrade pip && \
 
 # --- Stage 5: Copy application code ---
 # Copy the FastAPI app
-COPY app.py .
+COPY Sales_prediction_app.py .
 
 # Copy the serialized model artifacts produced by running the notebook
 # (The /models folder must exist locally before building the image)
@@ -45,4 +45,4 @@ COPY models/ ./models/
 EXPOSE 8000
 
 # Launch the Uvicorn ASGI server
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "Sales_prediction_app:app", "--host", "0.0.0.0", "--port", "8000"]
