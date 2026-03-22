@@ -1,0 +1,37 @@
+# ============================================================
+# .dockerignore - Keep the Docker image lean
+# Files listed here are NOT copied into the container image.
+# ============================================================
+
+# Jupyter notebooks and scripts (not needed in production)
+*.ipynb
+*.py
+!app.py
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# IDE settings
+.vscode/
+.idea/
+
+# Test files
+tests/
+*.test.py
